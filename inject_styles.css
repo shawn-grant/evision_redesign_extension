@@ -1,0 +1,11 @@
+body{
+    background-color: aqua !important;
+}
+
+.btn-get-started{
+    background: black !important;
+}
+
+.navbar-brand{
+    background: red;
+}
