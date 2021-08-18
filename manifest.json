@@ -1,6 +1,6 @@
 {
-    "name": "Test Extension",
-    "description": "just a test",
+    "name": "Evision Redesigner",
+    "description": "This extension makes the UTECH student portal usable for human beings",
     "version": "1.0",
     "manifest_version": 3,
     "background": {
@@ -25,5 +25,5 @@
         "tabs", 
         "scripting"
     ],
-    "host_permissions": ["https://sentosa-jm.web.app/*"]
+    "host_permissions": ["https://evisionweb.utech.edu.jm/*"]
 }
