@@ -1,10 +1,49 @@
 table:nth-child(1){
     display: none !important;
 }
-body{
-    /* background: #222 !important; */
-}
 
 .sitstableoutline{
+    background: none !important;
+    border: none !important;
+}
 
+#loginform{
+    padding: 10px !important;
+    border: 2px solid rgb(0, 35, 100) !important;
+    border-radius: 10px !important;
+    color: black;
+    width: 60% !important;
+    align-self: center !important;
+    margin: auto !important;
+}
+
+#loginform h1{
+    color: rgb(0, 35, 100) !important;
+}
+
+#loginform .form-control{
+    border: rgb(25, 53, 105) 1px solid !important;
+}
+
+#loginform .formsub80.btn-primary{
+    background: rgb(0, 35, 100) !important;
+    color: rgb(255, 208, 0) !important;
+    border: none !important;
+    padding: 10px 20px 10px 20px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/*error popups*/
+#sitsmessagebox{
+    padding: 10px !important;
+    border-radius: 10px !important;
+}
+.sitsmessagecode{
+    display: none !important;
+}
+
+@media only screen and (max-width: 500px) {
+    #loginform{
+        width: 100% !important;
+    }
 }

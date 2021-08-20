@@ -1,5 +1,10 @@
+//navbar image
+$('#navlogo').attr('src', chrome.runtime.getURL('icons/utechlogo.png'))
+
 //replace body with my html
-$("body").html("<div><h1>hi</h1></div>");
+$.get(chrome.runtime.getURL('html/loginpage.html'), (data) => {
+    
+    //$("body").html($('body').html() + data);
+    $('.sitstableoutline').html(data)
+});
 
-
-console.log ("hello")

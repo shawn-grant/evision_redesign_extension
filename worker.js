@@ -22,14 +22,40 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
             files: ["./scripts/jquery.min.js"]
         })
             .then(() => {
-                console.log("injected Jquery")
+                console.log("injected JQUERY")
+
+                //inject BOOTSTRAP JS
+                chrome.scripting.executeScript({
+                    target: { tabId: tabId },
+                    files: ["./scripts/bootstrap.min.js"]
+                })
+                    .then(() => {
+                        console.log("injected BOOTSTRAP JS")
+                        
+                        //inject BOOTSTRAP CSS
+                        chrome.scripting.insertCSS({
+                            target: { tabId: tabId },
+                            files: ["./css/bootstrap.min.css"]
+                        })
+                            .then(() => {
+                                console.log("injected BOOTSTRAP CSS")
+                            })
+                            .catch(err => {
+                                console.log(err)
+                            })
+                    })
+                    .catch(err => {
+                        console.log(err)
+                    })
             })
             .catch(err => {
                 console.log(err)
             })
         
+        
+        
         //THIS IS THE LOGIN PAGE
-        if (tab.url == "https://evisionweb.utech.edu.jm/sipr/sits.urd/run/siw_lgn") {
+        if (tab.url == "https://evisionweb.utech.edu.jm/sipr/sits.urd/run/siw_lgn" || tab.url == "https://evisionweb.utech.edu.jm/sipr/sits.urd/run/SIW_LGN") {
             cssfile = "./css/loginpage.css"
             jsfile = "./scripts/loginpage.js"
         }

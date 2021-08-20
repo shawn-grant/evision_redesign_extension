@@ -25,5 +25,11 @@
         "tabs", 
         "scripting"
     ],
-    "host_permissions": ["https://evisionweb.utech.edu.jm/*"]
+    "host_permissions": ["https://evisionweb.utech.edu.jm/*"],
+    "web_accessible_resources": [
+        {
+            "resources": [ "/html/*", "/icons/*" ],
+            "matches": [ "<all_urls>" ]
+        }
+    ]
 }
