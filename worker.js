@@ -1,13 +1,5 @@
 chrome.runtime.onInstalled.addListener(() => {
     console.log('Installed ')
-
-    // chrome.storage.local.set({
-    //     "name": "Shawn"
-    // })
-
-    // chrome.storage.local.get('name', data => {
-        
-    // })
 })
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
@@ -53,7 +45,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
             })
         
         
-        
+        // INJECT THE APPROPRIATE CSS AND JS FILES BASED ON THE PAGE WE ARE ON
         //THIS IS THE LOGIN PAGE
         if (tab.url == "https://evisionweb.utech.edu.jm/sipr/sits.urd/run/siw_lgn" || tab.url == "https://evisionweb.utech.edu.jm/sipr/sits.urd/run/SIW_LGN") {
             cssfile = "./css/loginpage.css"

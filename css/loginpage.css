@@ -2,6 +2,25 @@ table:nth-child(1){
     display: none !important;
 }
 
+table{
+    border: none;
+}
+
+.navbar{
+    background: rgb(0, 35, 100) !important;
+}
+
+.navbar-brand{
+    text-decoration: none !important;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-brand #navlogo{
+    filter: drop-shadow(0px 0px 5px #ffffff);
+}
+
 .sitstableoutline{
     background: none !important;
     border: none !important;
@@ -17,7 +36,7 @@ table:nth-child(1){
     margin: auto !important;
 }
 
-#loginform h1{
+#loginform h2{
     color: rgb(0, 35, 100) !important;
 }
 
@@ -31,6 +50,11 @@ table:nth-child(1){
     border: none !important;
     padding: 10px 20px 10px 20px !important;
     font-family: Arial, Helvetica, sans-serif !important;
+}
+
+#loginform .formsub80.btn-primary:active{
+    background: rgb(13, 79, 202) !important;
+    color: rgb(255, 208, 0) !important;
 }
 
 /*error popups*/

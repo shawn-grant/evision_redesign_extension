@@ -1,29 +1,25 @@
-<nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <img id="navlogo" src="" width="30" height="30" class="d-inline-block align-top" alt="">
-      University of Technology, Jamaica
-    </a>
-</nav>
 
 <div id="loginform">
-    <h1>Portal Login</h1>
+    <h2>Portal Login</h2>
     <small class="form-text text-muted">First time? Your password is your date of birth in the format ddmmyy</small>
     <br>
 
     <div class="form-group">
         <label for="MUA_CODE.DUMMY.MENSYS">Student ID (ex: 1003456)</label>
-        <input type="text" name="MUA_CODE.DUMMY.MENSYS.1" value="" id="MUA_CODE.DUMMY.MENSYS" class="form-control" placeholder="Enter ID">
+        <input type="number" name="MUA_CODE.DUMMY.MENSYS.1" value="" id="MUA_CODE.DUMMY.MENSYS" class="form-control"
+            placeholder="Enter ID" autocomplete="username">
     </div>
 
     <br>
     <div class="form-group">
         <label for="PASSWORD.DUMMY.MENSYS">Password</label>
-        <input type="password" class="form-control" name="PASSWORD.DUMMY.MENSYS.1" value="" id="PASSWORD.DUMMY.MENSYS" placeholder="Enter Password">
+        <input type="password" class="form-control newpasswordinput" name="PASSWORD.DUMMY.MENSYS.1" value="" id="PASSWORD.DUMMY.MENSYS" 
+            placeholder="Enter Password" autocomplete="current-password">
     </div>
 
     <div class="form-check">
         <input type="checkbox" class="form-check-input" id="showpasswordcheck">
-        <label class="form-check-label" for="showpasswordcheck">Show password</label>
+        <label id="checkboxlabel" class="form-check-label" for="showpasswordcheck">Show password</label>
     </div>
     <br>
 
@@ -37,4 +33,23 @@
     <br>
     <br>
     <a href="../run/siw_pqs.forgot?">Forgot your password?</a>
+</div>
+
+<div class="modal" id="errormodal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 style="color: red;" class="modal-title" id="errortitle">ERROR</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p style="color: rgb(255, 75, 75);" id="errormessage">Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
 </div>
