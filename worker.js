@@ -46,8 +46,12 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         
         
         // INJECT THE APPROPRIATE CSS AND JS FILES BASED ON THE PAGE WE ARE ON
+        if (tab.url == "https://evisionweb.utech.edu.jm/sipr/") {
+            //skip the 'click here to login' page
+            chrome.tabs.update(undefined, { url: "https://evisionweb.utech.edu.jm/sipr/sits.urd/run/siw_lgn" });
+        }
         //THIS IS THE LOGIN PAGE
-        if (tab.url == "https://evisionweb.utech.edu.jm/sipr/sits.urd/run/siw_lgn" || tab.url == "https://evisionweb.utech.edu.jm/sipr/sits.urd/run/SIW_LGN") {
+        else if (tab.url == "https://evisionweb.utech.edu.jm/sipr/sits.urd/run/siw_lgn" || tab.url == "https://evisionweb.utech.edu.jm/sipr/sits.urd/run/SIW_LGN") {
             cssfile = "./css/loginpage.css"
             jsfile = "./scripts/loginpage.js"
         }
