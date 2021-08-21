@@ -1,3 +1,11 @@
+body{
+    background:rgb(238, 238, 238) !important;
+}
+
+#loginform{
+    background:rgb(255, 255, 255) !important;
+}
+
 table:nth-child(1){
     display: none !important;
 }

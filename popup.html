@@ -5,13 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="popup.css">
-    <title>Document</title>
+    <title>Evision Redisigner</title>
 </head>
 <body>
     <div class="container">
-        <h4 style="color:rgb(0, 168, 112)">Extension is running</h4>
-        <a href="https://github.com/shawn-grant/" target="_blank">fork on Git</a>
-        <p>created by <a href="https://shawn-grant.github.io" target="_blank">Shawn Grant</a></p>
+        <h1>&lt; Evision Redisigner /&gt;</h1>
+
+        <div id="status">
+            <span id="statustext">Extension is ON</span>
+            <!-- Rounded switch -->
+            <label class="switch" >
+                <input id="check" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <p>Refresh portal page to see changes</p>
+        <br>
+        <div style="margin-bottom: 10px;">
+            <a id="open-btn" target="_blank" href="https://evisionweb.utech.edu.jm/sipr/sits.urd/run/siw_lgn">OPEN PORTAL</a>
+            <a style="float: right;" href="https://github.com/shawn-grant/" target="_blank">fork on GitHub</a>
+        </div>
     </div>
+
+    <script src="popup.js"></script>
 </body>
 </html>
