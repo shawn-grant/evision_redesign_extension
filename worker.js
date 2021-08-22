@@ -59,11 +59,14 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                 chrome.tabs.update(undefined, { url: "https://evisionweb.utech.edu.jm/sipr/sits.urd/run/siw_lgn" });
             }
             //THIS IS THE LOGIN PAGE
-            else if (tab.url == "https://evisionweb.utech.edu.jm/sipr/sits.urd/run/siw_lgn" || tab.url == "https://evisionweb.utech.edu.jm/sipr/sits.urd/run/SIW_LGN") {
+            else if (tab.url == "https://evisionweb.utech.edu.jm/sipr/sits.urd/run/siw_lgn" ||
+                tab.url == "https://evisionweb.utech.edu.jm/sipr/sits.urd/run/SIW_LGN" ||
+                tab.url == "https://evisionweb.utech.edu.jm/sipr/sits.urd/run/SIW_PQS")
+            {
                 cssfile = "./css/loginpage.css"
                 jsfile = "./scripts/loginpage.js"
             }
-            //THIS IS THE DOB VERIFY PAGE
+            //THIS IS THE MAIN PAGE
             else if (tab.url == "https://evisionweb.utech.edu.jm") {
                 cssfile = "./css/inject_styles.css"
                 jsfile = "./scripts/loginpage.js"

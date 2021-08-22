@@ -9,39 +9,48 @@ $(document).ready(() => {
     });
 
 
-    //replace form section with my html
-    $.get(chrome.runtime.getURL('html/loginpage.html'), (data) => {
-        //insert the form
-        $('.sitstableoutline').html(data)
+    /// BOTH LOGIN AND SECURITY QUESTION PAGE SHARE THE SAME URL SO DIFFERENT LOGIC IS 
+    /// NEEDED BASED ON WHICH SECTION WE ARE
+    /// Here we try determine the page by the title of it
 
-        //remove extra spaces
-        $('br')[0].remove()
-        $('br')[1].remove()
-        $('br')[2].remove()
-        $('br')[10].remove()
-        $('br')[11].remove()
+    if (document.title == "Security questions") { //security question section
+    
+    }
+    else { //regular login section "Login to the portal"
 
-        //password toggle
-        $('#showpasswordcheck, #checkboxlabel').click(() => {
-            $('#showpasswordcheck').is(':checked') ?
-                $('.newpasswordinput').attr('type', 'text') :
-                $('.newpasswordinput').attr('type', 'password')
-        })
+        //replace form section with my html
+        $.get(chrome.runtime.getURL('html/loginpage.html'), (data) => {
+            //insert the form
+            $('.sitstableoutline').html(data)
 
-        //check if there is an error message and replace it with a modal
-        if ($('#sitsmessagebox').length) {
-            //title
-            let title = $('#sitsmessagebox .sitsmessagetitle').html()
-            let message = $('#sitsmessagebox .sitsmessagecontent').html()
+            //remove extra spaces
+            $('br')[0].remove()
+            $('br')[1].remove()
+            $('br')[2].remove()
+            $('br')[10].remove()
+            $('br')[11].remove()
 
-            $('#errormodal #errortitle').html('Error -'+title)
-            $('#errormodal #errormessage').html(message)
+            //password toggle
+            $('#showpasswordcheck, #checkboxlabel').click(() => {
+                $('#showpasswordcheck').is(':checked') ?
+                    $('.newpasswordinput').attr('type', 'text') :
+                    $('.newpasswordinput').attr('type', 'password')
+            })
 
-            $('#errormodal').modal('show')
-            $('#sitsmessagebox').hide()
-        }
-    });
+            //check if there is an error message and replace it with a modal
+            if ($('#sitsmessagebox').length) {
+                //title
+                let title = $('#sitsmessagebox .sitsmessagetitle').html()
+                let message = $('#sitsmessagebox .sitsmessagecontent').html()
 
+                $('#errormodal #errortitle').html('Error -' + title)
+                $('#errormodal #errormessage').html(message)
+
+                $('#errormodal').modal('show')
+                $('#sitsmessagebox').hide()
+            }
+        });
+    }
     
 
 })
