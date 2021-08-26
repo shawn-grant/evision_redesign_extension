@@ -27,7 +27,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                     //inject BOOTSTRAP JS
                     chrome.scripting.executeScript({
                         target: { tabId: tabId },
-                        files: ["./scripts/bootstrap.min.js"]
+                        files: ["./scripts/bootstrap.bundle.min.js"]
                     })
                         .then(() => {
                             console.log("injected BOOTSTRAP JS")

@@ -65,6 +65,27 @@ table{
     color: rgb(255, 208, 0) !important;
 }
 
+.sqform h2{
+    color: rgb(0, 35, 100) !important;
+}
+
+.sqform .form-control{
+    border: rgb(25, 53, 105) 1px solid !important;
+}
+
+.sqform .formsubfree.btn-primary{
+    background: rgb(0, 35, 100) !important;
+    color: rgb(255, 208, 0) !important;
+    border: none !important;
+    padding: 10px 20px 10px 20px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.sqform .formsub80.btn-primary:active{
+    background: rgb(13, 79, 202) !important;
+    color: rgb(255, 208, 0) !important;
+}
+
 /*error popups*/
 #sitsmessagebox{
     padding: 10px !important;

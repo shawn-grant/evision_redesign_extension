@@ -8,13 +8,36 @@ $(document).ready(() => {
         $('#navlogo').attr('src', chrome.runtime.getURL('icons/utechlogo.png'))
     });
 
+    $('form').attr('autocomplete', 'on')
 
     /// BOTH LOGIN AND SECURITY QUESTION PAGE SHARE THE SAME URL SO DIFFERENT LOGIC IS 
     /// NEEDED BASED ON WHICH SECTION WE ARE
     /// Here we try determine the page by the title of it
 
-    if (document.title == "Security questions") { //security question section
-    
+    if (document.title == "Security Questions and Answers") { //security question section
+        // leave page as is
+
+        //get the hidden inputs
+        let hiddeninputs = $('.bgformsub')
+        let submitBtn = $('input.formsubfree')
+
+        $.get(chrome.runtime.getURL('html/login_security.html'), (data) => {
+            //insert the form
+            $('form').append(data)
+
+            //check if there is an error message and replace it with a modal
+            if ($('#sitsmessagebox').length) {
+                //title
+                let title = $('#sitsmessagebox .sitsmessagetitle').html()
+                let message = $('#sitsmessagebox .sitsmessagecontent').html()
+
+                $('#errormodal #errortitle').html('Error -' + title)
+                $('#errormodal #errormessage').html(message)
+
+                $('#errormodal').modal('show')
+                $('#sitsmessagebox').hide()
+            }
+        })
     }
     else { //regular login section "Login to the portal"
 
